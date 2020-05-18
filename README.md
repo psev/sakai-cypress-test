@@ -18,13 +18,12 @@ Then, install dependencies:
 
 ## Running
 
-To open Cypress, run:
+To open Cypress:
 
-`npm run cypress:open`
+`CYPRESS_BASE_URL='http://qa20-mysql.nightly.sakaiproject.org' npm run cypress:open`
 
-To run Cypress in headless mode and only for a specific version, run:
-
-`./node_modules/.bin/cypress-tags run -e TAGS='@sakai-20'`
+You can specify the `admin` username and password with the
+`CYPRESS_ADMIN_USERNAME` and `CYPRESS_ADMIN_PASSWORD` environment variables.
 
 ## Testing
 
@@ -33,7 +32,6 @@ To run Cypress in headless mode and only for a specific version, run:
 ```gherkin
 Feature: This is an example feature
 
-  @sakai-20
   @site
   Scenario: This is an example scenario
     Given I am the instructor
